@@ -1,0 +1,58 @@
+[
+    {
+        "model": "tovari.categories",
+        "pk": 4,
+        "fields": {
+            "name": "Все товары",
+            "slug": "vse-tovary"
+        }
+    },
+    {
+        "model": "tovari.categories",
+        "pk": 5,
+        "fields": {
+            "name": "Кухни",
+            "slug": "kuhni"
+        }
+    },
+    {
+        "model": "tovari.categories",
+        "pk": 6,
+        "fields": {
+            "name": "Спальня",
+            "slug": "spalnya"
+        }
+    },
+    {
+        "model": "tovari.categories",
+        "pk": 7,
+        "fields": {
+            "name": "Офис",
+            "slug": "ofis"
+        }
+    },
+    {
+        "model": "tovari.categories",
+        "pk": 8,
+        "fields": {
+            "name": "Гостиная",
+            "slug": "gostinnaya"
+        }
+    },
+    {
+        "model": "tovari.categories",
+        "pk": 9,
+        "fields": {
+            "name": "Декор",
+            "slug": "dekor"
+        }
+    },
+    {
+        "model": "tovari.categories",
+        "pk": 10,
+        "fields": {
+            "name": "Фурнитура",
+            "slug": "furnitura"
+        }
+    }
+]

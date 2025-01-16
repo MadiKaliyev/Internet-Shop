@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block modal_cart %}
+{% include "includes/cart_button.html" %}
+{% endblock %}
+
+{% block name%}
+<div class="container mt-5">
+    <div class="card mb-4 custom-shadow position-relative">
+
+        <!-- Крестик для закрытия -->
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-2" aria-label="Закрыть" onclick="history.back();"></button>
+
+        <div class="row">
+            <!-- Левая колонка с изображением -->
+            <div class="col-md-4">
+                <img src="{{ product.image.url }}"
+                    class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal1">
+            </div>
+
+            <!-- Правая колонка с описанием -->
+            <div class="col-md-8">
+                <p class="product_id mt-3">ID: {{ product.display_id }}</p>
+                <h5 class="card-title mt-3">{{ product.name }}</h5>
+                <p class="card-text">Цена: <strong>{{ product.sell_price }} $</strong></p>
+                
+                <!-- Добавлено описание -->
+                {% if product.discription %}
+                    <h6 class="mt-4">Описание:</h6>
+                    <p class="card-text">{{ product.discription }}</p>
+                {% else %}
+                    <p class="card-text text-muted">Описание отсутствует.</p>
+                {% endif %}
+
+                <div class="mt-4">
+                    <a href="{% url 'carts:cart_add' %}" 
+                       class="btn btn-dark add-to-cart" 
+                       data-product-id="{{ product.id }}">
+                        Добавить в корзину
+                    </a>
+                    <a href="{% url 'tovari:generate_pdf' product.slug %}" class="btn btn-dark">
+                        Скачать PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

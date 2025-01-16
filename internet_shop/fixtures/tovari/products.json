@@ -1,0 +1,142 @@
+[
+    {
+        "model": "tovari.products",
+        "pk": 1,
+        "fields": {
+            "name": "Чайный столик и два стула",
+            "slug": "chajnyj-stolik-i-dva-stula",
+            "discription": "Набор чайного столика и двух стульев идеально подходит для уютных чаепитий.",
+            "image": "tovari_images/set_of_tea_table_and_two_chairs_d4Qah6w.jpg",
+            "price": "93.00",
+            "discount": "0.00",
+            "quantity": 15,
+            "category": 5
+        }
+    },
+    {
+        "model": "tovari.products",
+        "pk": 2,
+        "fields": {
+            "name": "Двуспальная кровать",
+            "slug": "dvuhspalnaya-krovat",
+            "discription": "Элегантная двуспальная кровать с мягкой спинкой для комфортного сна.",
+            "image": "tovari_images/double_bed_O0imenH.jpg",
+            "price": "670.00",
+            "discount": "0.00",
+            "quantity": 12,
+            "category": 6
+        }
+    },
+    {
+        "model": "tovari.products",
+        "pk": 3,
+        "fields": {
+            "name": "Кухонный стол с раковиной",
+            "slug": "kuhonnyj-stol-s-rakovinoj",
+            "discription": "Кухонный стол с встроенной раковиной, который отлично впишется в интерьер кухни.",
+            "image": "tovari_images/kitchen_table_9f0fCEz.jpg",
+            "price": "365.00",
+            "discount": "0.00",
+            "quantity": 5,
+            "category": 5
+        }
+    },
+    {
+        "model": "tovari.products",
+        "pk": 4,
+        "fields": {
+            "name": "Кухонный стол с встройкой",
+            "slug": "kuhonnyj-stol-s-vstrojkoj",
+            "discription": "Кухонный стол с встройкой, который дополнит любой кухонный гарнитур.",
+            "image": "tovari_images/kitchen_table_2_8abbJ3i.jpg",
+            "price": "430.00",
+            "discount": "0.00",
+            "quantity": 46,
+            "category": 5
+        }
+    },
+    {
+        "model": "tovari.products",
+        "pk": 5,
+        "fields": {
+            "name": "Угловой диван для гостиной",
+            "slug": "uglovoj-divan-dlya-gostinnoj",
+            "discription": "Комфортный угловой диван, который станет центром вашей гостиной.",
+            "image": "tovari_images/corner_sofa_uoIQtrv.jpg",
+            "price": "610.00",
+            "discount": "0.00",
+            "quantity": 2,
+            "category": 8
+        }
+    },
+    {
+        "model": "tovari.products",
+        "pk": 6,
+        "fields": {
+            "name": "Прикроватный столик",
+            "slug": "prikrovatnyj-stolik",
+            "discription": "Компактный прикроватный столик для хранения ваших вещей.",
+            "image": "tovari_images/strange_table.jpg",
+            "price": "55.00",
+            "discount": "0.00",
+            "quantity": 4,
+            "category": 6
+        }
+    },
+    {
+        "model": "tovari.products",
+        "pk": 7,
+        "fields": {
+            "name": "Обыкновенный диван",
+            "slug": "divan-obyknovennyj",
+            "discription": "Простой диван для повседневного использования.",
+            "image": "tovari_images/sofa_dvlBTeL.jpg",
+            "price": "190.00",
+            "discount": "0.00",
+            "quantity": 6,
+            "category": 8
+        }
+    },
+    {
+        "model": "tovari.products",
+        "pk": 8,
+        "fields": {
+            "name": "Стул офисный",
+            "slug": "stul-ofisnyj",
+            "discription": "Эргономичный офисный стул для комфортной работы.",
+            "image": "tovari_images/office_chair_g5hGHow.jpg",
+            "price": "30.00",
+            "discount": "0.00",
+            "quantity": 0,
+            "category": 7
+        }
+    },
+    {
+        "model": "tovari.products",
+        "pk": 9,
+        "fields": {
+            "name": "Растение",
+            "slug": "rastenie",
+            "discription": "Декоративное растение для украшения интерьера.",
+            "image": "tovari_images/plants_PsISscq.jpg",
+            "price": "10.00",
+            "discount": "0.00",
+            "quantity": 23,
+            "category": 9
+        }
+    },
+    {
+        "model": "tovari.products",
+        "pk": 10,
+        "fields": {
+            "name": "Цветок стилизированный",
+            "slug": "cvetok-stilizirovannyj",
+            "discription": "Декоративный стилизированный цветок для интерьера.",
+            "image": "tovari_images/flower_1GsNhwG.jpg",
+            "price": "0.00",
+            "discount": "0.00",
+            "quantity": 16,
+            "category": 9
+        }
+    }
+]

@@ -1,0 +1,42 @@
+{% load static %}
+{% load carts_tags %}
+
+{% user_carts request as carts %}
+
+<div>
+    <!-- Кнопка для открытия модального окна -->
+    <button type="button" class="btn btn-dark btn-secondary d-flex" id="modalButton"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" aria-expanded="false">
+        <img class="mx-1" src="{% static 'deps/icons/basket2-fill.svg' %}" alt="Catalog Icon" width="24" height="24">
+        <span id="tovar-in-cart-count">{{ carts.total_quantity }}</span>
+    </button>
+</div>
+
+<!-- Разметка модального окна корзины -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true" data-bs-backdrop="false" data-bs-keyboard="false"> <!-- Отключено затемнение фона -->
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Корзина</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center mb-4">Ваши товары</h4>
+                <div class="container" id="cart-items-container">
+                    <!-- Разметка корзины -->
+                    {% include 'carts/includes/included_cart.html' %}
+                    <!-- Конец разметки корзины -->
+                </div>
+                {% if carts %}
+                    <a class="btn btn-dark w-100 mt-4" href="{% url 'orders:create_order' %}">
+                        Оформить заказ
+                    </a>
+                {% else %}
+                <p class="text-center mt-3">Ваша корзина пуста.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

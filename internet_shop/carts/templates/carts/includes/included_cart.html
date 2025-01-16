@@ -1,0 +1,73 @@
+{% load static %}
+
+<div>
+    <!-- Кнопка для открытия модального окна -->
+    <button type="button" class="btn btn-dark btn-secondary d-flex" id="modalButton"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" aria-expanded="false">
+        <img class="mx-1" src="{% static 'deps/icons/basket2-fill.svg' %}" alt="Basket Icon" width="24" height="24">
+        <!-- Здесь обновляется количество товаров -->
+        <span id="tovar-in-cart-count">{{ carts.total_quantity }}</span>
+    </button>
+</div>
+
+<div class="card mb-3 text-bg-light shadow-lg">
+    <!-- Здесь обновляется содержимое корзины -->
+    <div id="cart-items-container">
+        {% for cart in carts %}
+        <div class="card-header">
+            <h5 class="card-title">{{ cart.product.name }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="row text-center">
+                    <div class="col p-0">
+                        <div class="input-group">
+
+
+
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-dark btn-sm decrement"
+                                    data-cart-id="{{ cart.id }}" 
+                                    data-cart-change-url="{% url 'carts:cart_change' %}">
+                                    {% csrf_token %}-</button>
+                            </span>
+                            <input type="text" class="form-control number" value="{{ cart.quantity }}" readonly>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-dark btn-sm increment"
+                                    data-cart-id="{{ cart.id }}" 
+                                    data-cart-change-url="{% url 'carts:cart_change' %}">+</button>
+                            </span>
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="col p-0">
+                        <p>x {{ cart.product.sell_price }} = </p>
+                    </div>
+                    <div class="col p-0"><strong>{{ cart.product_price }}$</strong></div>
+                    <div class="col p-0">
+                        
+                        <a href="{% url 'carts:cart_remove' %}" 
+                            class="remove-from-cart" 
+                            data-cart-id="{{ cart.id }}">
+                            <img src="{% static 'deps/icons/trash3-fill.svg' %}" alt="Удалить" width="16" height="16">
+                        </a>
+
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="card mb-3 shadow-lg">
+    <!-- Здесь обновляется итоговая сумма -->
+    <div class="card-footer">
+        <p class="float-left">Итого <strong id="total-items-count">{{ carts.total_quantity }}</strong> товар(а) на сумму</p>
+        <h4 class="float-left"><strong id="total-price">{{ carts.total_price }} $</strong></h4>
+    </div>
+</div>
